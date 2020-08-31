@@ -1,0 +1,330 @@
+/////////////////////////////////
+// Site Wide Rules Go here
+// These Should be base rules that wont change much
+////////////////////////////////
+html, body {
+  height: 100%;
+}
+
+
+body {
+    // font-family: 'Open Sans', sans-serif;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      // background-color: black;
+
+    &.logged-in {
+        #wpadminbar {
+            margin-top: 0 !important;
+        }
+
+    }
+    svg.filter {
+      height: 0;
+    }
+}
+
+
+
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    section {
+      background-color: white;
+      position: relative;
+      z-index: 10;
+    }
+}
+
+
+header {
+  position: relative;
+  width: 100%;
+  // padding-bottom: 80px;
+  // margin-bottom: -80px;
+}
+
+div.body-wrap {
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  z-index: 100;
+}
+
+
+
+////////////////////////////////
+// Bootstrap Modifiers
+////////////////////////////////
+
+.img-fluid {
+   width: 100%;
+}
+
+.overflow-x {
+    overflow-x: visible !important;
+}
+.overflow-x-hidden {
+    overflow-x: hidden !important;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.container.x-large {
+    max-width: 1540px !important
+}
+
+.desktop {
+  @include media-breakpoint-down(sm) {  
+    display: none!important;
+  }
+}
+.mobile {
+  @include media-breakpoint-up(md) {  
+    display: none;
+  }
+}
+#swup {
+     // margin-top: 165px;
+     // @include media-breakpoint-down(sm) {
+     //     margin-top: 45px;
+     // }   
+    // filter: url("#bigturbulence");
+    // -webkit-filter: url("#bigturbulence");
+
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+.accordion-title a {
+  cursor: pointer;
+}
+
+
+a {
+    transition: all .25s ease;
+    &:hover {
+    transition: all .25s ease;
+    }
+}
+
+
+hr {
+  border-top: 1px solid rgba($green, 0.5);
+}
+
+video[poster]{
+height:100%;
+width:100%;
+object-fit: cover;
+}
+
+
+p::-moz-selection {
+    color: white
+}
+
+p::selection {
+    color: white;
+}
+
+h1::-moz-selection {
+    color: white
+}
+
+h1::selection {
+    color: white;
+}
+
+
+
+h2::-moz-selection {
+    color: black
+}
+
+h2::selection {
+    color: black;
+}
+
+h3::-moz-selection {
+    color: black
+}
+
+h3::selection {
+    color: black;
+}
+
+::-moz-selection {
+    background: $teal;
+    color: white;
+}
+
+::selection {
+    background: $teal;
+    color: white;
+}
+
+
+.flexible-ratio {
+    position: relative; 
+    span {
+      display: block;
+      width: 100%;
+    }
+}
+
+.dotted-border-top {
+  position: relative;
+  margin-top: 80px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: -81px;
+    left: 0;
+    background: url('assets/images/global/dotted-border.svg');
+    background-color: white;
+    background-size: cover;
+    pointer-events: none;
+  }
+}
+.dotted-border-bottom, .body-wrap {
+  position: relative;
+  margin-bottom: 80px;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: -80px;
+    left: 0;
+    background: url('assets/images/global/dotted-border.svg');
+    background-color: white;
+    background-size: cover;
+    pointer-events: none;
+  }
+}
+
+
+br.medium {
+  @include media-breakpoint-down(md) { 
+    display: none;
+  } 
+}
+br.small {
+  @include media-breakpoint-down(sm) { 
+    display: none;
+  } 
+}
+/////////////////////////
+// Contact Styles
+/////////////////////////
+
+
+/////////////////////////
+// Blog Styles
+/////////////////////////
+
+.wp-user-avatar {
+  border-radius: 50%;
+}
+
+/////////////////////////
+// Footer
+/////////////////////////
+
+footer {
+  z-index: 1000;
+  position: relative;
+  background-color: black;
+  color: white;
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  // .one-one {
+  //   @include media-breakpoint-down(md) { 
+  //     margin-bottom: 100px;
+  //     margin-top: 80px;
+  //   }
+  //    @include media-breakpoint-down(sm) { 
+  //     margin-bottom: 80px;
+  //     margin-top: 60px;
+  //   }
+  // }
+  @include media-breakpoint-up(md){
+    text-align: center
+  }
+  p {
+    color: $teal;
+  }
+
+ a {  
+    color: $teal;
+    border-bottom: 1px solid $orange;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+ }
+
+a.back-to-top {
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: url(assets/images/icons/ic_arrow_upward.svg);
+    left: -15px;
+    top: 6px;
+    position: absolute;
+  }
+}
+ 
+.mobile.img-fluid {
+    max-width: 275px;
+}
+
+ .social {
+  padding-bottom: 30px;
+    a.logo {
+      border-bottom: 0;
+        svg {
+          width: 30px;
+          height: 30px;
+          margin-right: 0px;
+          path {
+             fill: $teal!important;
+            transition: fill .25s ease;
+          }
+          @include media-breakpoint-down(sm) {
+              width: 45px;
+              height: 45px;
+              margin-top: 30px;
+          }
+        }
+        &:hover {
+          text-decoration: none;
+          svg path{
+            fill: white!important;
+            transition: fill .25s ease;
+          }
+        }
+      }
+
+   }
+   
+}
+

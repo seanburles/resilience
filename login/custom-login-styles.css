@@ -1,0 +1,90 @@
+body.login {
+  /*background-color: */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.login h1 a {
+  background-image: url('logo.svg');
+  background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #444;
+    height: 50px;
+    font-size: 20px;
+    line-height: 1.3em;
+    margin: 0 auto 25px;
+    padding: 0;
+    width: 70%;
+    text-indent: -9999px;
+    outline: 0;
+    display: block;
+    opacity: 0;
+    transform: scale(.9) translateY(25px);
+}
+
+.login .active h1 a {
+    opacity: 1;
+    transform: scale(1)  translateY(0px);;
+    transition: all 1s ease .5s;
+}
+
+
+.login form {
+    box-shadow: none;
+}
+
+.login label {
+  font-size: 12px;
+  color: #555555;
+}
+
+.login input[type="text"]{
+  background-color: #ffffff;
+  border-color:#dddddd;
+  -webkit-border-radius: 4px;
+}
+
+.login input[type="password"]{
+  background-color: #ffffff;
+  border-color:#dddddd;
+  -webkit-border-radius: 4px;
+}
+
+.wp-core-ui .button.button-large {
+  height: 48px;
+}
+
+.login .button-primary {
+    width: 100%;
+    /* float: right; */
+    background-color: #a88144 !important;
+    color: #ffffff;
+    -webkit-border-radius: 0px;
+    border: 3px solid #a88144;
+    box-shadow: 0 0px 0 transparent;
+    text-shadow: none!important;
+    margin-top: 15px;
+    height: 48px;
+    line-height: 28px;
+    padding: 0 34px 2px;
+    font-weight: bold;
+}
+
+.login .button-primary:hover {
+  background-color: white !important;
+  color: #000;
+  -webkit-border-radius: 0px;
+  border: 3px solid  #a88144;
+  transition: all .5s ease;
+}
+
+.login .button-primary:active {
+  background-color:#2d5172 !important;
+  color: #fff;
+  -webkit-border-radius: 0px;
+  border: 1px solid  #2d5172;
+  transition: all .5s ease;
+}
+

@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('assets/fonts/SharpGroteskBold05.woff2') format('woff2'),
+        url('assets/fonts/SharpGroteskBold05.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk Book';
+    src: url('assets/fonts/SharpGroteskBook25.woff2') format('woff2'),
+        url('assets/fonts/SharpGroteskBook25.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk Light';
+    src: url('assets/fonts/SharpGroteskLight25.woff2') format('woff2'),
+        url('assets/fonts/SharpGroteskLight25.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grtsk Giga';
+    src: url('assets/fonts/GrtskGiga-Bold.woff2') format('woff2'),
+        url('assets/fonts/GrtskGiga-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+        font-family: 'TRY Grtsk Variable';
+    src: url('assets/fonts/TRYGrtskVariable.woff2') format('woff2'),
+        url('assets/fonts/TRYGrtskVariable.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// @font-face {
+//     font-family: 'Alternate Gothic No3 D';
+//     src: url('assets/fonts/AlternateGotNo3D.woff2') format('woff2'),
+//         url('assets/fonts/AlternateGotNo3D.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+
+////////////////////////////////
+// Text Styles
+////////////////////////////////
+
+.r-logo {
+  // font-family: 'Sharp Grotesk', sans-serif;
+  // font-size: 265px;
+  // font-weight: bold;
+  // font-stretch: normal;
+  // font-style: normal;
+  // line-height: normal;
+  // letter-spacing: normal;
+  // text-transform: uppercase;
+  // color: $teal;
+ } 
+
+h1,
+h2,
+h3,
+h4 {
+    // font-family: 'Sharp Grotesk', sans-serif;
+    // margin-bottom: 0;
+}
+
+h1 {
+    // @include fluid-type(41, 71, 480, 1600);
+    // letter-spacing: 0;
+    // line-height: .9em;
+    // font-weight: 800;
+}
+
+h2 {
+    // @include fluid-type(34, 52, 480, 1600);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.25em;
+}
+
+h3 {
+    @include fluid-type(24, 29, 480, 1600);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.45em;
+}
+
+h4 {
+    @include fluid-type(29, 33, 480, 1440);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h5 {
+    @include fluid-type(29, 33, 480, 1440);
+    font-family: 'Alternate Gothic No3 D', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'TRY Grtsk Variable', sans-serif;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: transparent;
+}
+
+button:focus {
+    outline: 0px solid #fff;
+    // outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+strike {
+     text-decoration: line-through;
+    -webkit-text-decoration-line: line-through;
+    color: $orange;
+}
