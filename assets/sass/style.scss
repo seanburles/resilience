@@ -136,10 +136,14 @@ transition: color .25s ease;
 
 
 /////////////////////
-//
+// 404
 /////////////////////
 
-
+.page-404 {
+	.r-logo {
+		width: 280px;
+	}
+}
 
 
 ////////////////////////
@@ -267,7 +271,7 @@ transition: color .25s ease;
 
 	.video-header {
 	  position: relative;
-	  background-color: black;
+	  // background-color: black;
 	  // height: 75vh;
 	  min-height: 50vh;
 	  width: 100%;

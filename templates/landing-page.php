@@ -111,7 +111,7 @@ $post_slug = $post->post_name;
 
                 </div>
                 <div class="col-sm-12">
-                     <h2 class="desktop">This is OU[R[ Mural Project; Stories of [R]esilience.</h2>
+                     <h2 class="desktop">This is OU[R] Mural Project; Stories of [R]esilience.</h2>
 
                 </div>
 
@@ -125,13 +125,13 @@ if (have_rows('landing_page_image')):
 	// loop through the rows of data
 	while (have_rows('landing_page_image')): the_row();?>
 
-																		                                <?php
+																								                                <?php
 
 		$image = get_sub_field('image');
 
 		if (!empty($image)): ?>
 
-																		                        <?php // vars
+																								                        <?php // vars
 		$url = $image['url'];
 		$thumb = $image['sizes']['thumbnail'];
 		$alt = $image['alt'];
@@ -139,13 +139,13 @@ if (have_rows('landing_page_image')):
 		?>
 
 
-											<img class="lazy img-fluid" src="<?php echo $thumb; ?>" data-src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
+																	<img class="lazy img-fluid" src="<?php echo $thumb; ?>" data-src="<?php echo $url; ?>" alt="<?php echo $alt; ?>">
 
 
 
-																		                    <?php endif;?>
+																								                    <?php endif;?>
 
-									                <?php endwhile;
+												                <?php endwhile;
 
 else:
 	// no rows found
@@ -157,7 +157,7 @@ endif;
                 </div>
                 <div class="col-12">
                     <p class="mobile py-3">An art installation by DC-based, Creative Theory Agency designed to both inspire our community through art and storytelling while offering tangible resources to those most affected by COVID-19.</p>
-                     <h2 class="mobile pb-5">This is OU[R[ Mural Project; Stories of [R]esilience.</h2>
+                     <h2 class="mobile pb-5">This is OU[R] Mural Project; Stories of [R]esilience.</h2>
                 </div>
 
             </div>

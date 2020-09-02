@@ -81,7 +81,7 @@ h4 {
 }
 
 h1 {
-    // @include fluid-type(41, 71, 480, 1600);
+    @include fluid-type(41, 71, 480, 1600);
     // letter-spacing: 0;
     // line-height: .9em;
     // font-weight: 800;
@@ -153,5 +153,5 @@ button:active {
 strike {
      text-decoration: line-through;
     -webkit-text-decoration-line: line-through;
-    color: $orange;
+   text-decoration-color: $orange;
 }

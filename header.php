@@ -21,7 +21,16 @@
           <meta name="robots" content="index, follow">
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
           <meta name="language" content="English">
-	<!-- Google Analytics -->
+	       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173357151-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-173357151-2');
+        </script>
+
 
 
 	<?php wp_head();?>
@@ -29,7 +38,7 @@
 </head>
 
 
-<body <?php body_class();?> id="top">
+<body id="top">
 <?php wp_body_open();?>
 
 

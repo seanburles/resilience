@@ -42,7 +42,7 @@ function landingPageSlick(){
   $('.landing-page .slider').slick({
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     adaptiveHeight: true,
     autoplay: true,
