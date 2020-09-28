@@ -15,7 +15,7 @@ body {
       position: relative;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      // background-color: black;
+      background-color: black;
 
     &.logged-in {
         #wpadminbar {
@@ -35,7 +35,7 @@ main {
     position: relative;
     z-index: 1;
     section {
-      background-color: white;
+      // background-color: white;
       position: relative;
       z-index: 10;
     }
@@ -56,8 +56,37 @@ div.body-wrap {
   z-index: 100;
 }
 
+.top-bar {
+    height: 7px;
+    background-color: $orange;
+    width: 100%;
+    transition: all .5s ease;
+    position: absolute;
+      z-index: 10;
+    @include media-breakpoint-down(sm) { 
+      border-bottom: 186px solid black;
+      padding-top: 7px;
+      transition: all .5s ease;
+    }
+  }
 
+.slick-eq {
 
+  .slick-track{
+      display: flex;
+
+      .slick-slide{
+          display: flex;
+          height: auto;
+          align-items: center; //optional
+          justify-content: center; //optional
+      }
+  }
+}
+
+video {
+  width: 100%;
+}
 ////////////////////////////////
 // Bootstrap Modifiers
 ////////////////////////////////
@@ -100,6 +129,14 @@ div.body-wrap {
     // filter: url("#bigturbulence");
     // -webkit-filter: url("#bigturbulence");
 
+}
+
+.pl {
+  padding-left: 0;
+}
+
+.pr {
+  padding-right: 0;
 }
 
 button {
@@ -185,38 +222,40 @@ h3::selection {
     }
 }
 
-.dotted-border-top {
-  position: relative;
-  margin-top: 80px;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    top: -81px;
-    left: 0;
-    background: url('assets/images/global/dotted-border.svg');
-    background-color: white;
-    background-size: cover;
-    pointer-events: none;
-  }
-}
-.dotted-border-bottom, .body-wrap {
-  position: relative;
-  margin-bottom: 80px;
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    bottom: -80px;
-    left: 0;
-    background: url('assets/images/global/dotted-border.svg');
-    background-color: white;
-    background-size: cover;
-    pointer-events: none;
-  }
-}
+// .dotted-border-top {
+//   position: relative;
+//   margin-top: 80px;
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 80px;
+//     top: -81px;
+//     left: 0;
+//     background: url('assets/images/global/dotted-border.svg');
+//     background-color: white;
+//     background-size: cover;
+//     pointer-events: none;
+//   }
+// }
+// .dotted-border-bottom, .body-wrap {
+//   position: relative;
+//   margin-bottom: 80px;
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 80px;
+//     bottom: -80px;
+//     left: 0;
+//     background: url('assets/images/global/dotted-border.svg');
+//     background-color: white;
+//     background-size: cover;
+//     pointer-events: none;
+//   }
+// }
+
+
 
 
 br.medium {
@@ -241,6 +280,25 @@ br.small {
 .wp-user-avatar {
   border-radius: 50%;
 }
+
+
+////////////////////////
+// Header
+////////////////////////
+
+header.detatched {
+    z-index: 50;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: lowercase;
+    padding-top: 230px;
+    position: absolute;
+  .r-logo {
+    width: 276px;
+  }
+
+}
+
 
 /////////////////////////
 // Footer
@@ -271,25 +329,55 @@ footer {
   }
 
  a {  
+  position: relative;
     color: $teal;
-    border-bottom: 1px solid $orange;
+   &:before {
+          content: '';
+          height: 2px;
+          width: 100%;
+          background-color: $orange;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+
+        }
+        &:after {
+          content: '';
+          height: 2px;
+          width: 0;
+          background-color: $sapphire;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          transition: all .5s ease;
+        }
     &:hover {
       color: white;
       text-decoration: none;
+    &:after {
+        width: 100%;
+        transition: all .5s ease;
+      }
     }
  }
 
 a.back-to-top {
   position: relative;
   display: inline-block;
+    img {
+      width: 12px;
+      margin-top: -4px;
+      position: relative;
+      margin-right: 4px;
+    }
   &:before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: url(assets/images/icons/ic_arrow_upward.svg);
-    left: -15px;
-    top: 6px;
-    position: absolute;
+    // content: '';
+    // width: 12px;
+    // height: 12px;
+    // background: url(assets/images/icons/ic_arrow_upward.svg);
+    // left: -15px;
+    // top: 6px;
+    // position: absolute;
   }
 }
  

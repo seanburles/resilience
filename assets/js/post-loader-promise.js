@@ -1,9 +1,8 @@
 
 
-$('#ct_filters .filter-card').click(function(e)
+$('#ct_filters select').click(function(e)
 {
     // Special stuff to do when this link is clicked...
-
     // Cancel the default action
     e.preventDefault();
 });
@@ -12,34 +11,13 @@ $('#ct_filters .filter-card').click(function(e)
 
 function resourcesLoad(){
 
-if (document.querySelector('.page-blog') !== null) { 
+if (document.querySelector('.page-directory') !== null) { 
 
 jQuery(function($){
 
 
-	var themeName = 'clean-custom';
+	var themeName = 'r-mural';
 	var baseUrl = window.location.protocol + "//" + window.location.host + '/' + themeName + '/';
-	// jQuery.getScript( baseUrl + 'wp-content/themes/' + themeName + '/assets/lightcase/src/js/lightcase.js', function(){
- //       // console.log('resources lightcase exists');
- //       // $('a[data-rel=lightcase]').lightcase();
- //   }, true);
- 
- // 	function gsapStagger(){
-	// 	// var tl = gsap.timeline({onComplete:reloadHeight})
-	//   gsap.to(".our-content", {
-	//     x: "+=50",
-	//     opacity: 1,
-	//     duration: .75,
-	//     stagger: {
-	//       amount: 2,
-	//       // from: "center",
-	//       grid: "auto",
-	//      // onComplete: myFunction //define callbacks inside the stagger to make them apply to each sub-tween
-	//     }
-	//   });
-	// }
-
-
 
 
  	$(document).ready(function(){
@@ -56,7 +34,10 @@ jQuery(function($){
 				// $('#ct_filters').find('button').text('Filtering...');
 			},
 			success : function( data ){
+
  				
+			
+				
 				// when filter applied:
 				// set the current page to 1
 				ct_loadmore_params.current_page = 1;
@@ -74,19 +55,25 @@ jQuery(function($){
 				$('#ct_posts_wrap').html(data.content);
 
 				var t = new gsap.timeline({paused: true});
-				t.to(".our-content", {
-					    x: "+=50",
+				t.to(".resource-content", {
+					    x: "=50",
 					    opacity: 1,
-					    duration: .75,
+					    duration: .25,
 					    stagger: {
-					      amount: 2,
+					      amount: .25,
 					      // from: "center",
 					      grid: "auto",
 					     // onComplete: myFunction //define callbacks inside the stagger to make them apply to each sub-tween
 					    }
 					  });
 				t.then(function(res) {
+
+				var areaHeight = $('#ct_posts_wrap').height();	
+				$("#posts-limit-wrap").animate({
+			    	height: areaHeight
+				},500);
 				  // console.log('promise resolved')
+
 				});
 
  				
@@ -106,14 +93,15 @@ jQuery(function($){
 	 * Filter
 	 */
 	$('#ct_filters').change(function(){
+		// $('.list__ul').on('click', function(){
 
 		var t1 = new gsap.timeline({paused: true});
-				t1.to(".our-content", {
+				t1.to(".resource-content", {
 					    x: "-=50",
 					    opacity: 0,
-					    duration: .5,
+					    duration: .25,
 					    stagger: {
-					      amount: 2,
+					      amount: .25,
 					      // from: "center",
 					      grid: "auto",
 					     // onComplete: myFunction //define callbacks inside the stagger to make them apply to each sub-tween
@@ -160,12 +148,12 @@ jQuery(function($){
 				$('#ct_posts_wrap').html(data.content);
 
 					var t = new gsap.timeline({paused: true});
-					t.to(".our-content", {
-						    x: "+=50",
+					t.to(".resource-content", {
+						    x: "=0",
 						    opacity: 1,
-						    duration: .75,
+						    duration: .25,
 						    stagger: {
-						      amount: 2,
+						      amount: .25,
 						      // from: "center",
 						      grid: "auto",
 						     // onComplete: myFunction //define callbacks inside the stagger to make them apply to each sub-tween
@@ -180,20 +168,11 @@ jQuery(function($){
  				t.play();
 
 				var areaHeight = $('#ct_posts_wrap').height();
-				// console.log(areaHeight + 'this is after data is loaded on change');
+			
 				$("#posts-limit-wrap").animate({
 			    	height: areaHeight
-				},1000);
- 			// 	var areaHeight = $('#ct_posts_wrap').height();
-				// $("#posts-limit-wrap").animate({
-				//     height: areaHeight
-				// },1000);
-				// hide load more button, if there are not enough posts for the second page
-				// if ( data.max_page < 2 ) {
-				// 	$('#ct_loadmore').hide();
-				// } else {
-				// 	$('#ct_loadmore').show();
-				// }
+				},500);
+ 			
 				var hqyLazy = new HqyLazyload();
 				// $('a[data-rel=lightcase]').lightcase();
  			
@@ -212,5 +191,5 @@ jQuery(function($){
  
 });
 
-}
+	}
 }

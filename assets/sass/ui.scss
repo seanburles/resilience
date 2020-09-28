@@ -6,3 +6,204 @@
 .white {
 	color: white!important;
 }
+
+
+.page-directory {
+
+.d-flex {
+	    justify-content: center;
+	    align-items: center;
+	    span.title{
+	        font-size: 30px;
+	        color: black;
+	        font-family: 'Sharp Grotesk Book', sans-serif;
+	        padding-bottom: 0;
+	    }
+	}
+
+	.select-box {
+	    display: block;
+	    width: 100%;
+	}
+	.selectric-wrapper {
+	    // display: inline-block;
+	}
+	.selectric {
+	    width: 100%;
+	    border: 0px solid #DDD;
+	    border-radius: 0px;
+	    background: transparent;
+	    position: relative;
+	    overflow: hidden;
+	    .label {
+	        font-size: 30px;
+	        color: $orange;
+	        font-family: 'Sharp Grotesk Book', sans-serif;
+	        &:hover {
+	            color: $sapphire;
+	            
+	        }
+	    }
+	    .button {
+	    	display: none;
+	    }
+	}
+	.selectric-items {
+	    position: absolute;
+	    top: 100%;
+	    left: 0;
+	    // background: rgba(black, .9);
+	    border: 0px;
+	    z-index: -1;
+	    background-color: transparent;
+	    box-shadow: none;
+	    li {
+	        font-size: 30px;
+	        color: $orange;
+	        span {
+	        	padding: 5px 10px;
+	        	background-color: black;
+	        }
+	        &.highlighted {
+	            background: transparent;
+	            color: $yellow;
+	        }
+	        &:hover {
+	            background: transparent;
+	            color: $yellow;
+	        }
+	    }
+	}
+}
+
+
+
+///////////////////////////////////
+// Stories Slider
+//////////////////////////////////
+
+.slick-wrap {
+	position: relative;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s ease;
+    &.open {
+    	height: 100%;
+    	transition: all 1s ease;
+    }
+}
+
+.stories-slick {
+ 
+	.slick-prev {
+	    position: absolute;
+	    top: 50%;
+	    left: 2%;
+	    transform: translate(-50%, -50%);
+	    width: 36px;
+	    height: 50px;
+	    background-image: url(assets/images/icons/prev.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    z-index: 1000;
+	    transform-origin: center;
+	    &:before {
+	    	content: '';
+	    	display: none;
+	    }
+	    &:active {
+	    	width: 34px;
+	    	height: 48px;
+	    	opacity: .8;
+	    	transition: all .15s ease;
+	    }
+	}
+	.slick-next {
+	    position: absolute;
+	    top: 50%;
+	    right: 0%;
+	    transform: translate(-50%, -50%);
+	    width: 36px;
+	    height: 50px;
+	    background-image: url(assets/images/icons/next.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    z-index: 1000;
+	    &:before {
+	    	content: '';
+	    	display: none;
+	    }
+	    &:active {
+	    	width: 34px;
+	    	height: 48px;
+	    	opacity: .8;
+	    	transition: all .15s ease;
+	    }
+	}
+}
+
+
+
+///////////////////////////////////
+// Hamburger Buttons
+//////////////////////////////////
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  width: 80px;
+  position: absolute;
+right: 10px;
+top: 0px;
+z-index: 1000;
+}
+.line {
+  fill: none;
+  stroke: $orange;
+  stroke-width: 4;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1), 
+    stroke 600ms ease;
+
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+  
+
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
+ 
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+ 
+}
+.open .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+  stroke: $sapphire;
+ 
+}
+.open .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 4;
+  stroke: $sapphire;
+ 
+}
+.open .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+  stroke: $sapphire;
+ 
+}
+

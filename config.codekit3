@@ -6035,6 +6035,22 @@
 		"oAP": "/assets/fonts/SharpGroteskBold05.woff2",
 		"oF": 0
 		},
+	"/assets/fonts/SharpGroteskBook18-Regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/SharpGroteskBook18-Regular.woff",
+		"oF": 0
+		},
+	"/assets/fonts/SharpGroteskBook18-Regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/SharpGroteskBook18-Regular.woff2",
+		"oF": 0
+		},
 	"/assets/fonts/SharpGroteskBook25.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -7677,6 +7693,16 @@
 		"oAP": "/assets/images/header/main-logo.php",
 		"oF": 0
 		},
+	"/assets/images/icons/close.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/close.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/images/icons/ic_arrow_upward.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -7702,6 +7728,56 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/images/icons/instagram.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/large-screen.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/large-screen.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/logo-group-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/logo-group-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/next.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/next.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/play-button.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/play-button.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/images/icons/prev.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icons/prev.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -7759,6 +7835,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
+		"q": 100
+		},
+	"/assets/images/open-graph.png": {
+		"ft": 32768,
+		"iS": 1493313,
+		"oA": 0,
+		"oAP": "/assets/images/open-graph.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/images/page-company/ashar-aziz.jpg": {
@@ -7825,17 +7912,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
-		"q": 100
-		},
-	"/assets/images/page-company/ken.jpg": {
-		"ft": 16384,
-		"iS": 190514,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/assets/images/page-company/ken.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"/assets/images/page-company/lazy/ashar-aziz.jpg": {
@@ -7926,17 +8002,6 @@
 		"opt": 1,
 		"q": 100
 		},
-	"/assets/images/page-company/paul.jpg": {
-		"ft": 16384,
-		"iS": 109561,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/assets/images/page-company/paul.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/assets/images/page-company/symantec.png": {
 		"ft": 32768,
 		"iS": 15578,
@@ -7957,6 +8022,72 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-1.jpg": {
+		"ft": 16384,
+		"iS": 515605,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-2.jpg": {
+		"ft": 16384,
+		"iS": 429584,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-3.jpg": {
+		"ft": 16384,
+		"iS": 250275,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-4.jpg": {
+		"ft": 16384,
+		"iS": 1038346,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-5.jpg": {
+		"ft": 16384,
+		"iS": 940956,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/page-home/mural-6.jpg": {
+		"ft": 16384,
+		"iS": 324252,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/images/page-home/mural-6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/assets/images/resilience.svg": {
@@ -8213,6 +8344,17 @@
 		"oAP": "/assets/js/main-custom-min.js",
 		"oF": 0,
 		"sC": 2,
+		"tS": 0
+		},
+	"/assets/js/non-swup-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/non-swup-min-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"/assets/js/non-swup.js": {
@@ -9338,6 +9480,19 @@
 		"oS": 0,
 		"sct": 1
 		},
+	"/assets/sass/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/sass/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
 	"/assets/sass/style.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -9636,6 +9791,770 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/assets/scroll-plugin-master/webpack.config-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/.editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/.editorconfig",
+		"oF": 0
+		},
+	"/assets/selectric/.eslintrc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/.eslintrc",
+		"oF": 0
+		},
+	"/assets/selectric/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/.gitattributes",
+		"oF": 0
+		},
+	"/assets/selectric/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/.gitignore",
+		"oF": 0
+		},
+	"/assets/selectric/.travis.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/.travis.yml",
+		"oF": 0
+		},
+	"/assets/selectric/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/selectric/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/selectric/gulpfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/gulpfile-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/karma.conf.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/karma.conf-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/LICENSE",
+		"oF": 0
+		},
+	"/assets/selectric/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/selectric/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/selectric/public/ajax.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/ajax.html",
+		"oF": 0
+		},
+	"/assets/selectric/public/CNAME": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/CNAME",
+		"oF": 0
+		},
+	"/assets/selectric/public/customoptions.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/customoptions-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/demo.html",
+		"oF": 0
+		},
+	"/assets/selectric/public/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/favicon.ico",
+		"oF": 0
+		},
+	"/assets/selectric/public/img/browser-icons.png": {
+		"ft": 32768,
+		"iS": 3466,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/browser-icons.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/selectric/public/img/features-icons.png": {
+		"ft": 32768,
+		"iS": 1852,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/features-icons.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/selectric/public/img/header.jpg": {
+		"ft": 16384,
+		"iS": 34817,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/header.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/selectric/public/img/icoDownload.png": {
+		"ft": 32768,
+		"iS": 944,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/icoDownload.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/selectric/public/img/icon.png": {
+		"ft": 32768,
+		"iS": 802,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/selectric/public/img/jquery.minicolors.png": {
+		"ft": 32768,
+		"iS": 77459,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/img/jquery.minicolors.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/selectric/public/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/index.html",
+		"oF": 0
+		},
+	"/assets/selectric/public/jquery.selectric.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/jquery.selectric-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/jquery.selectric.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/jquery.selectric.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/lib/demo.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/demo-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/lib/jquery-ui.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/jquery-ui.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/lib/jquery.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/jquery.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/lib/jquery.minicolors.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/jquery.minicolors.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/lib/prism.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/prism-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/lib/prism.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/lib/prism-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/plugins/jquery.selectric.addNew.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/plugins/jquery.selectric.addNew-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/plugins/jquery.selectric.addNew.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/plugins/jquery.selectric.addNew-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/plugins/jquery.selectric.addNew.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/plugins/jquery.selectric.addNew.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/plugins/jquery.selectric.placeholder.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/plugins/jquery.selectric.placeholder-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/plugins/jquery.selectric.placeholder.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/plugins/jquery.selectric.placeholder.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/public/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/share.jpg": {
+		"ft": 16384,
+		"iS": 21346,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/share.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/selectric/public/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/flat-dark-blue/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/flat-dark-blue/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/flat-light-blue/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/flat-light-blue/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/flat-marsala/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/flat-marsala/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/flat-radiant-orchid/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/flat-radiant-orchid/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/flat-red/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/flat-red/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/modern-v2/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/modern-v2/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/modern/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/modern/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/plus/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/plus/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/square/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/square/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/public/themes/template/selectric.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/public/themes/template/selectric-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/selectric/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/assets/selectric/selectric.jquery.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/assets/selectric/selectric.jquery-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/assets/selectric/src/jquery.selectric.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/jquery.selectric-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/src/plugins/jquery.selectric.addNew.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/plugins/jquery.selectric.addNew-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/src/plugins/jquery.selectric.addNew.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/plugins/jquery.selectric.addNew.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/plugins/jquery.selectric.placeholder.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/plugins/jquery.selectric.placeholder-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/src/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/themes/flat-dark-blue/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/themes/flat-dark-blue/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/themes/flat-light-blue/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/themes/flat-light-blue/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/themes/flat-marsala/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/themes/flat-marsala/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/themes/flat-radiant-orchid/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/themes/flat-radiant-orchid/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/src/themes/flat-red/selectric.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/src/themes/flat-red/selectric.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/selectric/test/basic.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/basic.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/events.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/events.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/fixtures/basic.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/fixtures/basic.html",
+		"oF": 0
+		},
+	"/assets/selectric/test/fixtures/hidden.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/fixtures/hidden.html",
+		"oF": 0
+		},
+	"/assets/selectric/test/fixtures/multiple.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/fixtures/multiple.html",
+		"oF": 0
+		},
+	"/assets/selectric/test/fixtures/optgroup.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/fixtures/optgroup.html",
+		"oF": 0
+		},
+	"/assets/selectric/test/fixtures/options.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/fixtures/options.html",
+		"oF": 0
+		},
+	"/assets/selectric/test/keyboard.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/keyboard.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/lib/jasmine-jquery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/lib/jasmine-jquery-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/lib/keyvent.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/lib/keyvent.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/mobile.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/mobile.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/multiple.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/multiple.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/options.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/options.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/assets/selectric/test/visibility.spec.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/selectric/test/visibility.spec-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -10051,6 +10970,14 @@
 		"oAP": "/footer.php",
 		"oF": 0
 		},
+	"/front-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/front-page.php",
+		"oF": 0
+		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -10177,6 +11104,14 @@
 		"oAP": "/page-contact.php",
 		"oF": 0
 		},
+	"/page-directory.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-directory.php",
+		"oF": 0
+		},
 	"/page-faq.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -10207,6 +11142,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-request-a-demo.php",
+		"oF": 0
+		},
+	"/page-stories-backup.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-stories-backup.php",
+		"oF": 0
+		},
+	"/page-stories.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-stories.php",
 		"oF": 0
 		},
 	"/page-support.php": {

@@ -23,6 +23,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import 'transitions';
 @import 'globals';
 @import 'nav';
+@import 'selectric';
 //@import "hamburgers/hamburgers";
 
 /////////////////////////
@@ -129,12 +130,275 @@ transition: color .25s ease;
 
 .page-home {
 
+	h2.desktop {
+		font-family: 'Grtsk Giga', sans-serif;
+		font-size: 60px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.05;
+		letter-spacing: normal;
+		// margin-top: -50px;
+
+	}
+	.video-header {
+	  position: relative;
+	  padding-top: 275px;
+	  min-height: 50vh;
+	  width: 100%;
+	  overflow: hidden;
+	   @include media-breakpoint-down(sm) { 
+
+	   }
+	  @include media-breakpoint-down(sm) { 
+	  	// overflow: visible;
+	  	min-height: 500px;
+	  }
+	}
+
+	.video-header video {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  min-width: 100%;
+	  min-height: 100%;
+	  width: auto;
+	  height: auto;
+	  z-index: 0;
+	  -ms-transform: translateX(-50%) translateY(-50%);
+	  -moz-transform: translateX(-50%) translateY(-50%);
+	  -webkit-transform: translateX(-50%) translateY(-50%);
+	  transform: translateX(-50%) translateY(-50%);
+	}
+
+	.video-header .container {
+	  position: relative;
+	  z-index: 2;
+	}
+
+	.video-header .overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background-color: black;
+	  opacity: 0.5;
+	  z-index: 1;
+	}
+
+	.logos {
+		width: 400px;
+		height: 95px;
+		margin-bottom: 15px;
+		background-size: contain!important;
+		margin-top: 45px;
+		margin-bottom: 60px;
+	}
+
 	
 } 
 
 
+/////////////////////
+// Directory
+/////////////////////
+.page-directory {
+	.lead-in {
+		h3 {
+			color: $jade;
+			font-weight: normal;
+		}
+	}
+	.filter {
+		background-color: white;
+	}
+
+	.resource-content {
+		border-top: 3px solid $teal;
+		padding-top: 15px;
+		padding-bottom: 10px;
+		h3 {
+			color: $sapphire;
+			font-weight: normal;
+		}
+		 p {
+		 	color: black;
+		 }
+		 .social {
+		 	// display: flex;
+		 	// justify-content: flex-end;
+		 	margin-left: auto;
+		 	a {
+		 		display: table;
+		 		text-transform: lowercase;
+		 		color: black;
+		 		position: relative;
+		 		&:before {
+		 			content: '';
+		 			height: 2px;
+		 			width: 100%;
+		 			background-color: $sapphire;
+		 			position: absolute;
+		 			left: 0;
+		 			bottom: 0;
+
+		 		}
+		 		&:after {
+		 			content: '';
+		 			height: 2px;
+		 			width: 0;
+		 			background-color: $orange;
+		 			position: absolute;
+		 			left: 0;
+		 			bottom: 0;
+		 			transition: all .5s ease;
+		 		}
+		 		&:hover {
+		 			text-decoration: none;
+		 			&:after {
+		 				width: 100%;
+		 				transition: all .5s ease;
+		 			}
+		 		}
+
+		 		@include media-breakpoint-down(md){
+		 			display: inline-block;
+
+		 		}
+		 	}
+		 }
+	}
+
+}
 
 
+/////////////////////
+// Stories
+/////////////////////
+ .page-stories {
+
+ 	.stories-slick {
+ 		opacity: 0;
+ 		// display: none;
+ 		&.slick-initialized {
+ 			opacity: 1;
+ 			transition: opacity .5s ease;
+ 		}
+ 		    .close {
+		    	position: absolute;
+    			right: 10px;
+    			top: 10px;
+    			width: 40px;
+		    }
+ 	}
+
+ 		.info {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			left: 0;
+			width: 100%;
+			display: flex;
+			&.playing{
+		    	opacity: 0;
+		    	pointer-events: none;
+		    	transition: opacity .5s ease;
+		    }
+ 		}
+ 		.bottom-panel {
+ 			width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: flex-end;
+		    div {
+		    	flex: 0 0 33%;
+		    	&.play {
+		    		img {
+		    			margin: 0 auto;
+		    			}
+		    		}
+		    		&.fullscreen {
+		    			img {
+		    				margin-left: auto;
+		    			}
+		    		}
+		    	img {
+		    		width: 45px;
+		    	}
+		    }
+
+ 		}
+ 	.slide {
+ 		.sixteen-nine {
+ 		&.lazy {
+
+	    		transition: all .5s ease;
+	 		}
+
+	 		&.text {
+	 			position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    background-color: $sapphire; 
+			    transition: all .25s ease;
+			   .content {
+			   	 border: 2px solid $teal;
+			   	 .content-wrap {
+			   	 	position: relative;
+			   	 	height: 100%;
+			   	 	div {
+			   	 		width: 100%;
+						display: flex;
+						align-items: flex-end;
+						height: 100%;
+						position: absolute;
+						justify-content: space-between;
+						top: 0;
+						left: 0;
+			   	 	}
+			   	 }
+			   }
+	 		}
+	 	}
+ 		&.active {
+ 			.sixteen-nine {
+	 			&.lazy {
+		    		transition: all .25s ease;
+	    		}
+	    	}	
+ 		}
+ 	
+ 		h1 {
+ 			color: $flesh;
+ 			font-size: 24px!important;
+ 			transition: all .25s ease;
+ 		}
+ 		h2 {
+ 			color: $flesh;
+ 			font-size: 20px!important;
+ 			transition: all .25s ease;
+ 		}
+ 	&:hover, &.active {
+ 		.sixteen-nine {
+ 			&.text {
+	 			position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    background-color: transparent; 
+			    transition: all .25s ease;
+			    h1, h2 {
+		 			color: white;
+		 			transition: all .25s ease;
+		 		}
+	 		}
+ 		}
+ 	}
+ 	}
+
+}
 /////////////////////
 // 404
 /////////////////////

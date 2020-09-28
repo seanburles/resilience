@@ -17,6 +17,16 @@
 }
 
 @font-face {
+    font-family: 'Sharp Grotesk Book 18';
+    src: url('assets/fonts/SharpGroteskBook18-Regular.woff2') format('woff2'),
+        url('assets/fonts/SharpGroteskBook18-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
     font-family: 'Sharp Grotesk Light';
     src: url('assets/fonts/SharpGroteskLight25.woff2') format('woff2'),
         url('assets/fonts/SharpGroteskLight25.woff') format('woff');
@@ -88,15 +98,15 @@ h1 {
 }
 
 h2 {
-    // @include fluid-type(34, 52, 480, 1600);
-    font-family: 'Montserrat', sans-serif;
+    @include fluid-type(45, 60, 480, 1600);
+    font-family: 'Grtsk Giga', sans-serif;
     font-weight: bold;
     line-height: 1.25em;
 }
 
 h3 {
     @include fluid-type(24, 29, 480, 1600);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sharp Grotesk Book';
     font-weight: bold;
     line-height: 1.45em;
 }
@@ -114,8 +124,18 @@ h5 {
 }
 
 p {
-    font-family: 'TRY Grtsk Variable', sans-serif;
+    font-family: 'Sharp Grotesk Book 18', sans-serif;
+    color: white;
+    @include fluid-type(16, 18, 480, 1440);
+    &.try {
+        font-family: 'TRY Grtsk Variable', sans-serif;
+    }
+    &.lead {
+        @include fluid-type(21, 24, 480, 1440);
+        font-family: 'Sharp Grotesk Book';
+    }
 }
+
 
 button {
     display: inline-block;
@@ -155,3 +175,9 @@ strike {
     -webkit-text-decoration-line: line-through;
    text-decoration-color: $orange;
 }
+
+
+
+
+// Form stuff
+

@@ -11,7 +11,7 @@ function clean_custom_scripts_styles() {
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.5.1.min.js', array(), null, true);
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/dist/js/bootstrap.bundle.min.js', '4.3', true);
 	// wp_enqueue_script( 'gsap','//cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.js', array(),'1',true );
-	wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/gsap-business-green/minified/gsap.min.js', '1', true);
+	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', '1', true);
 	// wp_enqueue_script( 'imagesload',  get_template_directory_uri() . '/assets/js/imagesloaded.js' );
 	wp_enqueue_script('waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js');
 	wp_enqueue_script('countdown', get_template_directory_uri() . '/assets/js/jquery.countdown.min.js');
@@ -24,18 +24,20 @@ function clean_custom_scripts_styles() {
 	wp_enqueue_script('swupbody', get_template_directory_uri() . '/assets/body-class-plugin-master/dist/SwupBodyClassPlugin.min.js');
 	wp_enqueue_script('swupscroll', get_template_directory_uri() . '/assets/scroll-plugin-master/dist/SwupScrollPlugin.min.js');
 	wp_enqueue_script('swupjs', get_template_directory_uri() . '/assets/js/swup/dist/swup.min.js');
+	wp_enqueue_script('select', get_template_directory_uri() . '/assets/selectric/src/jquery.selectric.js');
 	wp_enqueue_script('lazy', get_template_directory_uri() . '/assets/js/lazyload-min.js');
-	// wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/slick/slick/slick.min.js');
+
+	wp_enqueue_script('slick', get_template_directory_uri() . '/assets/slick/slick/slick.min.js');
 	// wp_enqueue_script( 'html5player', get_template_directory_uri() . '/assets/lightcase/src/js/lightcase.js', array( 'jquery' ), '1', 'all'  );
 	// wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ) );
 
 	// Lets serve up a de-swupped version for logged in users and for IE users
-	if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false)) {
-		wp_enqueue_script('non-swup', get_template_directory_uri() . '/assets/js/non-swup-min.js');
-	} else {
-		// Else lets give them the full javascript swup and all
-		wp_enqueue_script('main-custom', get_template_directory_uri() . '/assets/js/main-custom.js');
-	}
+	// if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false)) {
+	// 	wp_enqueue_script('non-swup', get_template_directory_uri() . '/assets/js/non-swup-min.js');
+	// } else {
+	// Else lets give them the full javascript swup and all
+	wp_enqueue_script('main-custom', get_template_directory_uri() . '/assets/js/main-custom.js');
+	// }
 
 }
 add_action('wp_enqueue_scripts', 'clean_custom_scripts_styles');
@@ -92,6 +94,38 @@ add_filter('login_headertext', 'my_login_logo_url_title');
 // Add Custom post type
 ///////////////////////
 
+function stories() {
+	$labels = array(
+		'name' => _x('Stories', 'post type general name'),
+		'singular_name' => _x('Story', 'post type singular name'),
+		'add_new' => _x('Add New Story', 'Stories'),
+		'add_new_item' => __('Add New Stories'),
+		'edit_item' => __('Edit Stories'),
+		'new_item' => __('New Stories'),
+		'all_items' => __('All Stories'),
+		'view_item' => __('View Stories'),
+		'search_items' => __('Search Stories'),
+		'not_found' => __('No Stories found'),
+		'not_found_in_trash' => __('No Stories found in the Trash'),
+		'parent_item_colon' => '',
+		'menu_name' => 'Stories',
+	);
+	$args = array(
+		'labels' => $labels,
+		'description' => 'Stories will be held here',
+		'public' => true,
+		'menu_icon' => 'dashicons-format-video',
+		'menu_position' => 5,
+		'supports' => array('title', 'editor', 'excerpt', 'revisions'),
+		'has_archive' => true,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		// 'taxonomies' => array('category'),
+	);
+	register_post_type('stories', $args);
+}
+add_action('init', 'stories');
+
 function resources() {
 	$labels = array(
 		'name' => _x('Resources', 'post type general name'),
@@ -118,11 +152,41 @@ function resources() {
 		'has_archive' => true,
 		'hierarchical' => true,
 		'show_in_rest' => true,
-		'taxonomies' => array('category'),
+		// 'taxonomies' => array('category'),
 	);
 	register_post_type('Resources', $args);
 }
 add_action('init', 'resources');
+
+// Let us create Taxonomy for Custom Post Type
+add_action('init', 'custom_taxonomy', 0);
+
+//create a custom taxonomy name it "type" for your posts
+function custom_taxonomy() {
+
+	$labels = array(
+		'name' => _x('Resource Types', 'taxonomy general name'),
+		'singular_name' => _x('Resource Type', 'taxonomy singular name'),
+		'search_items' => __('Resource Types'),
+		'all_items' => __('All Types'),
+		'parent_item' => __('Parent Type'),
+		'parent_item_colon' => __('Parent Type:'),
+		'edit_item' => __('Edit Type'),
+		'update_item' => __('Update Type'),
+		'add_new_item' => __('Add New Resource Type'),
+		'new_item_name' => __('New Resource Types Name'),
+		'menu_name' => __('Resource Types'),
+	);
+
+	register_taxonomy('resource-types', array('resources'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'resource-type'),
+	));
+}
 
 //////////////////////////////////////
 // OPEN GRAPH AND META STUFF START
@@ -218,47 +282,24 @@ add_image_size('medium-width', 1000);
 
 // add_filter( 'single_template', 'load_article_template' );
 
-////////////////////////////////////////////////////////////////////////////
-// Add Classes to body based on page to control footer display and other things
-///////////////////////////////////////////////////////////////////////////
+// function grab_vimeo_thumbnail($vimeo_url) {
+// 	if (!$vimeo_url) {
+// 		return false;
+// 	}
 
-add_filter('body_class', 'my_custom_body_class');
-function my_custom_body_class($classes) {
-	global $post;
-	if ('resources' == $post->post_type && get_field('type_of_resource', $post->ID) == 'article') {
-		$classes[] = 'dark-header';
-	}
-	return $classes;
+// 	$data = json_decode(file_get_contents('http://vimeo.com/api/oembed.json?url=' . $vimeo_url));
 
-}
+// 	if (!$data) {
+// 		return false;
+// 	}
 
-add_filter('body_class', 'no_contact_body_class');
-function no_contact_body_class($classes) {
-	if (is_page(27) || is_page(27) || is_page(6) || is_page(10) || is_single()) {
-		$classes[] = 'no-contact';
-	}
+// 	// var_dump($data);
 
-	return $classes;
-}
+// 	echo  $data->thumbnail_url;
 
-add_filter('body_class', 'no_cta_body_class');
-function no_cta_body_class($classes) {
-	if (is_page(12) || is_page(14) || 'resources' == get_post_type() || is_single() || is_page(138) || is_page(142)) {
-		$classes[] = 'no-cta';
-	}
+// 	// return $data->thumbnail_url;
 
-	return $classes;
-}
-
-add_filter('body_class', 'no_upper_footer_body_class');
-function no_upper_footer_body_class($classes) {
-	global $post;
-	if (is_page(270) || is_home() || is_page(107) || is_single()) {
-		$classes[] = 'no-upper-footer';
-	}
-
-	return $classes;
-}
+// }
 
 //////////////////////////////////////
 // Add color swatches to Tiny MCE
@@ -301,6 +342,9 @@ function loadBanner() {
 // add_action( 'admin_footer-post.php',     'wpse_98274_disable_top_categories_checkboxes' );
 // add_action( 'admin_footer-post-new.php', 'wpse_98274_disable_top_categories_checkboxes' );
 
+/////////////////////////
+//Add all option to dropdown
+/////////////////////////
 /////////////////////////
 //Cloud Academy Filter / RESOURCE FILTER
 /////////////////////////
