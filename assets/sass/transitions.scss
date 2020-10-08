@@ -41,5 +41,67 @@
 
 
 
+.anim-brack {
+  transform: rotateY(-180deg);
+  display: inline-block;
+  color: $teal;
+  &:before {
+    content: '[';
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  &:after {
+    content: ']';
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  &.active {
+    transform: rotateY(0);
+    transition: all 1s ease;
+    color: unset;
+     &:before, &:after {
+       transform: translateX(0);
+       opacity: 1;
+       transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1) .5s, opacity 1s ease .5s, color .5s ease;
+     }
+  }
+}
 
 
+
+.thrive {
+  cursor: pointer;
+}
+
+@keyframes mixer {
+  0%  { color: $orange;}
+  25%  {color: $jade }
+  50%  {color: $sapphire;}
+  75% {color: $yellow;}
+  95% {color: $yellow;}
+  100% {color: $orange;}
+}
+
+.popover {
+  // // mix-blend-mode: difference;
+  // animation: mixer 5s infinite; 
+  background: rgba(0,0,0, .8);
+  max-width: 405px!important
+}
+.popover-header {
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+    font-size: 3rem!important;
+    background-color: transparent;
+    border-bottom: 1px solid $orange;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    animation: mixer 5s infinite; 
+}
+
+.popover-body {
+  font-size: 2em!important;
+  color: white;
+}

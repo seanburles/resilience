@@ -13,7 +13,7 @@ body {
       min-height: 100vh;
       flex-direction: column;
       position: relative;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Sharp Grotesk Book',sans-serif;
       font-weight: 500;
       background-color: black;
 
@@ -64,7 +64,7 @@ div.body-wrap {
     position: absolute;
       z-index: 10;
     @include media-breakpoint-down(sm) { 
-      border-bottom: 186px solid black;
+      border-bottom: 155px solid black;
       padding-top: 7px;
       transition: all .5s ease;
     }
@@ -91,6 +91,14 @@ video {
 // Bootstrap Modifiers
 ////////////////////////////////
 
+  .container-fluid:not(.norm), .container:not(.norm) {
+    @include media-breakpoint-down(sm){
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+
 .img-fluid {
    width: 100%;
 }
@@ -116,6 +124,11 @@ video {
     display: none!important;
   }
 }
+.tablet {
+   @include media-breakpoint-up(xl) {  
+    display: none;
+  }
+}
 .mobile {
   @include media-breakpoint-up(md) {  
     display: none;
@@ -131,12 +144,27 @@ video {
 
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
+.tall-cut-30 {
+  height: calc(100% - 30px)!important;
+}
 .pl {
   padding-left: 0;
 }
 
 .pr {
   padding-right: 0;
+}
+@include media-breakpoint-down(sm) {
+  .pl {
+  padding-left: 15px;
+}
+
+.pr {
+  padding-right: 15px;
+}
 }
 
 button {
@@ -168,6 +196,9 @@ width:100%;
 object-fit: cover;
 }
 
+video:focus {
+  outline: none;
+}
 
 p::-moz-selection {
     color: white
@@ -286,26 +317,114 @@ br.small {
 // Header
 ////////////////////////
 
-header.detatched {
-    z-index: 50;
-    font-weight: normal;
-    font-style: normal;
-    text-transform: lowercase;
-    padding-top: 230px;
-    position: absolute;
-  .r-logo {
-    width: 276px;
-  }
+.home {
+  header {
+      z-index: 50;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: lowercase;
+      position: absolute;
+    .r-logo {
+      width: 276px;
+    }
 
+  }
 }
 
+
+  header {
+      z-index: 50;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: lowercase;
+      position: relative;
+      .navbar-brand {
+        position: relative;
+        .end {
+          transform: translateX(0);
+          opacity: 1;
+          transition: all .5s ease;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 5px;
+          height: 100%;
+          width: 40px;
+          display: block;
+          background-image: url(assets/images/header/bracket.svg);
+          background-size: contain;
+          opacity: 0;
+          transition: all .5s ease;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          height: 100%;
+          width: 40px;
+          // right: 0;
+          display: block;
+          background-image: url(assets/images/header/bracket-end.svg);
+          // transform: rotate(180deg);
+          background-size: contain;
+          opacity: 0;
+          transition: all .5s ease;
+      }  
+      &:hover {
+          @include media-breakpoint-up(sm){
+          .end {
+            transform: translateX(40px);
+            opacity: .5;
+            transition: all .5s ease;
+          }
+
+           &:before {
+            opacity: 1;
+            transform: translateX(-40px);
+            transition: all .5s ease;
+           }
+           &:after {
+            opacity: 1;
+            transform: translateX(35px);
+            transition: all .5s ease;
+           }
+       }
+         .r-logo {
+            path {
+              fill: $orange!important;
+              transition: all .5s ease;
+            }
+         }
+      }
+    .r-logo {
+      width: 276px;
+      position: relative;
+      overflow: visible;
+      path {
+            transition: all .5s ease;
+          }
+      &:hover {
+        
+          // path {
+          //   fill: $orange!important;
+          //   transition: all .5s ease;
+          // }
+        
+      }
+      @include media-breakpoint-down(sm){
+        width: 250px;
+      }
+    }
+}
+  }
 
 /////////////////////////
 // Footer
 /////////////////////////
 
 footer {
-  z-index: 1000;
+  z-index: 0;
   position: relative;
   background-color: black;
   color: white;
@@ -321,7 +440,7 @@ footer {
   //     margin-top: 60px;
   //   }
   // }
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(xl){
     text-align: center
   }
   p {
@@ -381,7 +500,7 @@ a.back-to-top {
   }
 }
  
-.mobile.img-fluid {
+.tablet.img-fluid {
     max-width: 275px;
 }
 

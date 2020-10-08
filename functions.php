@@ -10,10 +10,15 @@ function clean_custom_scripts_styles() {
 	wp_deregister_script('jquery');
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.5.1.min.js', array(), null, true);
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/dist/js/bootstrap.bundle.min.js', '4.3', true);
-	// wp_enqueue_script( 'gsap','//cdnjs.cloudflare.com/ajax/libs/gsap/3.2.2/gsap.js', array(),'1',true );
+	wp_enqueue_script( 'popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js', '2.5.3', true);
+
+
+
+
 	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', '1', true);
+    wp_enqueue_script('scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', '2.0.7', true);
 	// wp_enqueue_script( 'imagesload',  get_template_directory_uri() . '/assets/js/imagesloaded.js' );
-	wp_enqueue_script('waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js');
+	// wp_enqueue_script('waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js');
 	wp_enqueue_script('countdown', get_template_directory_uri() . '/assets/js/jquery.countdown.min.js');
 
 	wp_enqueue_script('swupforms', get_template_directory_uri() . '/assets/forms-plugin-master/dist/SwupFormsPlugin.min.js');
@@ -265,6 +270,7 @@ add_action('wp_head', 'fb_opengraph', 5);
 
 // IMAGES
 // add_theme_support( 'post-thumbnails' );
+//https://gist.github.com/bacoords/77ee4d13dfa76db03981cb4eb0df0c6f
 add_image_size('medium-width', 1000);
 
 // Load Articles Template based on category
@@ -282,23 +288,25 @@ add_image_size('medium-width', 1000);
 
 // add_filter( 'single_template', 'load_article_template' );
 
-// function grab_vimeo_thumbnail($vimeo_url) {
-// 	if (!$vimeo_url) {
-// 		return false;
-// 	}
+/**
+ * Grab the specified data like Thumbnail URL of a publicly embeddable video hosted on Vimeo.
+ *
+ * @param  str $video_id The ID of a Vimeo video.
+ * @param  str $data      Video data to be fetched
+ * @return str            The specified data
+ */
+// function get_vimeo_data_from_id( $video_id, $data ) {
+//     $request = wp_remote_get( 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/' . $video_id );
+    
+//     $response = wp_remote_retrieve_body( $request );
+    
+//     $video_array = json_decode( $response, true );
 
-// 	$data = json_decode(file_get_contents('http://vimeo.com/api/oembed.json?url=' . $vimeo_url));
-
-// 	if (!$data) {
-// 		return false;
-// 	}
-
-// 	// var_dump($data);
-
-// 	echo  $data->thumbnail_url;
-
-// 	// return $data->thumbnail_url;
-
+//     // echo '<pre>';
+//     // print_r( $video_array );
+//     // echo '</pre>';
+    
+//     return $video_array[$data];
 // }
 
 //////////////////////////////////////
@@ -308,9 +316,9 @@ add_image_size('medium-width', 1000);
 function my_mce4_options($init) {
 
 	$custom_colors = '
-        "ed2027", "ShieldX Red",
-        "1dd1a1", "ShieldX Green",
-        "212529", "ShieldX Black"
+        "e76625", "Resilience Orange",
+        "364fa3", "Resilience Sapphire",
+        "039681", "Resilience Jade"
     ';
 
 	// build color grid default+custom colors
@@ -328,14 +336,14 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
 
 // Ajax Function to Load PHP Function myfunctionform1 smc 11/22/2013
 
-add_action('wp_ajax_getloadBanner', 'loadBanner');
-add_action('wp_ajax_nopriv_getloadBanner', 'loadBanner');
+// add_action('wp_ajax_getloadBanner', 'loadBanner');
+// add_action('wp_ajax_nopriv_getloadBanner', 'loadBanner');
 
-function loadBanner() {
+// function loadBanner() {
 
-	get_template_part('template-parts/header/banner-slider');
+// 	get_template_part('template-parts/header/banner-slider');
 
-	die();} // important must use
+// 	die();} // important must use
 
 // end Ajax Function to Load PHP Function myfunctionform1 smc 11/22/2013
 

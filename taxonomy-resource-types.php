@@ -3,19 +3,19 @@
 
 // Lets get the taxonomy from get_queried_object();
 $queried_object = get_queried_object(); 
-
+// var_dump($queried_object->name)
 ?>
 
 
 <div class="page-resource-archive">
         <section class="lead-in pb-5 mb-5">
                     <div class="container">
-                <h1 class="orange try-bld py-5 my-5">All Resources</h1>
+                <h1 class="orange try-bld py-5 my-5"><?php echo $queried_object->name;?> Resources</h1>
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="orange"><a class="orange" href="<?php echo home_url(); ?>/directory/">Visit our directory for a filterable view</a></h2>
+                        <p class="orange lead"><a class="orange" href="<?php echo home_url(); ?>/directory/">Visit our directory for a filterable view</a></p>
                         <h3 class="pb-3 mb-3">Take a deep dive into our 
-                        Directory and discover a multitude of resources ranging from organizations, charities, and everything in between. In partnership with Capital One, we have curated an extensive list of information and links to companies and programs dedicated to helping with the complexities of the world we live in today. With helpfulness in mind, this directory provides information on programs, grants, mental health resources, free educational courses, and minority-owned businesses to support.</h3>
+                        <?php echo $queried_object->name;?> Directory. In partnership with Capital One, we have curated an extensive list of information and links to companies and programs dedicated to helping with the complexities of the world we live in today. With helpfulness in mind, this directory provides information on <?php echo $queried_object->slug;?> resources, and minority-owned businesses to support.</h3>
                     </div>
 
                 </div>
@@ -32,11 +32,11 @@ $queried_object = get_queried_object();
                             'post_type'         => 'resources',
                             'posts_per_page'    => -1, 
                             'tax_query' => array(
-                                // array(
-                                //     // 'taxonomy' => 'article',
-                                //     'field'    => 'slug',
-                                //     'terms'    => $queried_object->slug,
-                                // ),
+                                array(
+                                    'taxonomy' => 'resource-types',
+                                    'field'    => 'slug',
+                                    'terms'    => $queried_object->slug,
+                                ),
                             ),
                         ));
 
@@ -57,9 +57,20 @@ $queried_object = get_queried_object();
                                             </div>            
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-8 col-sm-12 white">
-                                                <?php the_excerpt();?>
+                                            <div class="col-md-7 col-sm-12 white">
+                                                <?php echo '<p class="small">' . get_the_excerpt() . '</p>';?>
                                             </div>
+
+                                            <div class="col-md-3">
+                            
+
+                                                <?php
+                                                   $terms = get_the_terms( $post->ID, 'resource-types' );
+                                                   foreach($terms as $term){
+                                                    echo '<a class="sapphire" href="' . home_url() . '/resource-type/' . $term->slug . '">' . $term->name .   '</a><br>';
+                                                   }
+                                                    ?>
+                                                </div>
                                             <div class="col-md-2 col-sm-12 social">
                                                 <?php if( have_rows('social_media') ): ?>
                                                 <?php while( have_rows('social_media') ): the_row(); 

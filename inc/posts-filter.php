@@ -79,12 +79,28 @@ function ct_filter_function() {
 				    <div class="col-12 resource-content <?php the_ID();?>">
 				            <div class="row">
                                 <div class="col-md-7 col-sm-12">
-                                     <a href="<?php the_permalink();?>"><h3><?php the_title();?></h3></a>
+                                    <?php if(get_field('website_link')):?>
+                                        <a href="<?php the_field('website_link');?>" target="_blank" rel="noopener noreferrer"><h3><?php the_title();?></h3></a>
+                                        <?php else:?>
+                                        <h3><?php the_title();?></h3>   
+                                    <?php endif;?>
                                 </div>            
                             </div>
 				            <div class="row">
-                                <div class="col-md-8 col-sm-12">
-                                    <?php the_content();?>
+                                <div class="col-md-7 col-sm-12">
+                                    <?php echo '<p class="small">' . get_the_excerpt() . '</p>';?>
+                                </div>
+                                <div class="col-md-3">
+                            
+
+                                <?php
+                                   $terms = get_the_terms( $post->ID, 'resource-types' );
+                                   foreach($terms as $term){
+                                    echo '<a class="sapphire" href="' . home_url() . '/resource-type/' . $term->slug . '"><span>' . $term->name .   '</span></a>';
+                                   }
+                                    ?>
+
+
                                 </div>
                                 <div class="col-md-2 col-sm-12 social">
                                     <?php if( have_rows('social_media') ): ?>

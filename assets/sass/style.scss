@@ -64,6 +64,7 @@ header {
 
 .navbar-brand {
 	margin-right: 0;
+	padding-top: 20px;
 
 }
 
@@ -128,11 +129,11 @@ transition: color .25s ease;
 
 // Start Home Page styles
 
-.page-home {
+.page-home, .single-stories {
 
 	h2.desktop {
 		font-family: 'Grtsk Giga', sans-serif;
-		font-size: 60px;
+		// font-size: 60px;
 		font-weight: bold;
 		font-stretch: normal;
 		font-style: normal;
@@ -196,6 +197,79 @@ transition: color .25s ease;
 		margin-bottom: 60px;
 	}
 
+	.video-wrap {
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	&:focus {
+
+    		outline: none;
+
+    	}
+		.play-btn {
+			width: 25%;
+    		height: auto;
+    		position: absolute;
+    		svg {
+    			width: 100%;
+    			height: auto;
+    		}
+		}
+		@include media-breakpoint-down(sm){
+			margin-left: -30px;
+			margin-right: -30px
+		}
+	}
+
+	// .img-grid-container {
+	// 	display: grid;
+	// 	    grid-gap: 30px;
+	// 	  grid-template-columns: repeat(4, 1fr);
+ //  		grid-template-rows: repeat(12, 1fr);
+
+ //  		.item-a {
+  			
+	// 	  grid-column-start: 1;
+	// 	  grid-column-end: 3;
+	// 	  grid-row-start: 1;
+	// 	  grid-row-end: 2
+	// 	}
+	// 	.item-a-text {
+  			
+	// 	  grid-column-start: 3;
+	// 	  grid-column-end: 6;
+	// 	  grid-row-start: 1;
+	// 	  grid-row-end: 1;
+	// 	}
+	// 	.item-b {
+  			
+	// 	  grid-column-start: 1;
+	// 	  grid-column-end: 3;
+	// 	  grid-row-start: 2;
+	// 	  grid-row-end: 3;
+	// 	}
+	// 	.item-b-right {
+  			
+	// 	  grid-column-start: 3;
+	// 	  grid-column-end: 5;
+	// 	  grid-row-start: 2;
+	// 	  grid-row-end: 4;
+	// 	}
+
+	// 	.item-c {
+	// 	    grid-column-start: 2;
+	// 	    grid-column-end: 3;
+	// 	    grid-row-start: 3;
+	// 	    grid-row-end: 4;
+	// 	}
+	// 	.item-d {
+	// 	    grid-column-start: 1;
+	// 	    grid-column-end: 3;
+	// 	    grid-row-start: 4;
+	// 	    grid-row-end: 5;
+	// 	}
+	// }
+
 	
 } 
 
@@ -203,7 +277,7 @@ transition: color .25s ease;
 /////////////////////
 // Directory
 /////////////////////
-.page-directory {
+.page-directory, .page-resource-archive, .single-resource {
 	.lead-in {
 		h3 {
 			color: $jade;
@@ -211,7 +285,10 @@ transition: color .25s ease;
 		}
 	}
 	.filter {
+		overflow: hidden;
 		background-color: white;
+		padding-top: 30px;
+		padding-bottom: 60px;
 	}
 
 	.resource-content {
@@ -229,7 +306,7 @@ transition: color .25s ease;
 		 	// display: flex;
 		 	// justify-content: flex-end;
 		 	margin-left: auto;
-		 	a {
+		 	a {	margin-bottom: 8px;
 		 		display: table;
 		 		text-transform: lowercase;
 		 		color: black;
@@ -271,29 +348,377 @@ transition: color .25s ease;
 	}
 
 }
+ .page-resource-archive {
+ 			 
+ 		.white p {
+ 			color: white!important;
+ 		}
+ 			 .social {
 
+		 	margin-left: auto;
+		 	a {
+		 		display: table;
+		 		text-transform: lowercase;
+		 		color: white!important;
+		 		position: relative;
+		 		&:before {
+		 			content: '';
+		 			height: 2px;
+		 			width: 100%;
+		 			background-color: $sapphire;
+		 			position: absolute;
+		 			left: 0;
+		 			bottom: 0;
+
+		 		}
+		 		&:after {
+		 			content: '';
+		 			height: 2px;
+		 			width: 0;
+		 			background-color: $orange;
+		 			position: absolute;
+		 			left: 0;
+		 			bottom: 0;
+		 			transition: all .5s ease;
+		 		}
+		 		&:hover {
+		 			text-decoration: none;
+		 			&:after {
+		 				width: 100%;
+		 				transition: all .5s ease;
+		 			}
+		 		}
+
+		 		@include media-breakpoint-down(md){
+		 			display: inline-block;
+
+		 		}
+		 	}
+		 }
+ }
 
 /////////////////////
-// Stories
+// Stories Archive
 /////////////////////
  .page-stories {
 
- 	.stories-slick {
- 		opacity: 0;
- 		// display: none;
- 		&.slick-initialized {
- 			opacity: 1;
- 			transition: opacity .5s ease;
+
+
+ 	 .slide {
+ 	 	 border: 2px solid $teal;
+	 		.text {
+
+	 			position: absolute;
+	 			top: 0;
+	 			width: 100%;
+	 			top: 0;
+			    left: 0;
+			    width: 100%;
+			    background-color: rgba(0,0,0,0.7);
+			    // background-color: $sapphire; 
+			    transition: all .5s ease;
+		     	h1 {
+		 			color: $flesh;
+		 			 @include fluid-type(18, 24, 480, 1440);
+		 			transition: all .25s ease;
+		 			width: calc(100% - 50px);
+					}
+		 		h2 {
+		 			color: $flesh;
+		 			@include fluid-type(14, 18, 480, 1440);
+		 			transition: all .25s ease;
+		 			width: calc(100% - 50px);
+		 		}
+			     .content {
+			   		// background-color: rgba(0,0,0,0.7);
+			   		background-color: $sapphire;
+			   	 .content-wrap {
+			   	 	position: relative;
+			   	 	height: 100%;
+			   	 	padding: 30px;
+			   	 	display: flex;
+			   	 	flex-direction: column;
+			   	 	button.play {
+			   	 			width: 40px;
+					    	height: 50px;
+						    position: absolute;
+						    right: 30px;
+						    top: 30px;
+					    svg {
+					    	width: 100%;
+						    opacity: 0;
+						    transition: opacity .5s ease;
+					    }
+			   	 	}
+			   	 	div.title {
+			   	 		h1,h2 {
+			   	 			 font-family: 'Sharp Grotesk Book', sans-serif;
+			   	 			 margin-bottom: .25rem;
+
+			   	 		}
+			   	 	}
+			   	 	div.social {
+			   	 		position: absolute;
+			   	 		bottom: 30px;
+			   	 		display: flex;
+			   	 		justify-content: space-between;
+			   	 		width: calc(100% - 60px);
+
+			   	 		a {
+			   	 			text-decoration: none;
+			   	 			position: relative;
+			   	 			font-family: 'Sharp Grotesk Book', sans-serif;
+			   	 			color: $flesh;
+			   	 			&:before {
+					          content: '';
+					          height: 2px;
+					          width: 0;
+					          background-color: $flesh;
+					          position: absolute;
+					          left: 0;
+					          bottom: -2px;
+					           transition: all .5s ease;
+
+					        }
+					        &:hover {
+					        	&:before {
+							        content: '';
+							        height: 2px;
+							        width: 100%!important;
+							        background-color: $flesh;
+							        position: absolute;
+							        left: 0;
+							        bottom: -2px;
+							        transition: all .5s ease;
+
+							    }
+					        }
+			   	 		}
+	 				}
+	 			}
+			} 		
+		}
+
+
+		&:hover, &.active { 
+			.text {
+				background-color: rgba(0,0,0,0.7);
+			    // background-color: transparent; 
+			    transition: all .25s ease;
+			    h1, h2 {
+		 			color: white;
+		 			transition: all .25s ease;
+		 		}
+		 		.content {
+		 			// background-color: rgba(0,0,0,0.7);
+		 			background-color: transparent; 
+		 		}
+		 		.social {
+		 			a {
+		   	 			color: white!important;
+		   	 		}
+		 		}
+		 		.play {
+				    svg {
+					    opacity: 1!important;
+					    transition: opacity .5s ease;
+					    path {
+					    	transition: stroke .5s ease;
+					    }
+				    }
+					    &:hover {
+					    	svg {
+					    		path {
+					    			stroke: $flesh;
+					    			transition: stroke .5s ease;
+
+					    		}
+					    	}
+					    }
+			   	 }
+	 		}
+		}
+		.mobile-play, .mobile-close {
+			display: none;
+		}
+
+	}
+	
+
+
+
+
+@include media-breakpoint-down(sm){
+	.stories-slick {
+		display: none;
+	}
+ 	.slide {
+ 		video{
+ 			display: none;
  		}
+ 		.text {
+ 			position: relative;
+        	margin-top: -56.25%;
+    		width: 100%;
+    		transition: all .5s ease;
+    		background-color: $sapphire;
+ 		}
+ 		.mobile-play {
+			display: flex;
+		    justify-content: center;
+		    width: 100%;
+		    height: 100%;
+		    align-items: center;
+		}
+		.mobile-close {
+			width: 40px;
+		    position: absolute;
+		    top: 30px;
+		    right: 30px;
+		    display: block;
+		    // z-index: 1000;
+		}
+		button.play {
+			display: block;
+			z-index: 1000;
+			opacity: 1;
+			svg {
+			opacity: 1!important;
+			}
+		}
+		&:hover {
+			.text {
+				background-color: $sapphire;
+			} 
+		}
+
+ 		 &.active {
+ 			.text {
+ 				margin-top: 0;
+ 				transition: margin .5s ease, background-color .5s ease .5s;
+ 				.play {
+ 					opacity: 0;
+ 					transition: opacity .5s ease .5s;
+ 				}
+ 			}
+ 			&:hover {
+				.text {
+					background-color: transparent;
+				} 
+			}
+ 		}
+ 	}
+}
+
+
+// Story slick above
+ 	.stories-slick, .single-story-vid {
+ 	// 	opacity: 0;
+ 	// 	// display: none;
+ 	// 	&.slick-initialized {
+ 	// 		opacity: 1;
+ 	// 		transition: opacity .5s ease;
+ 	// 	}
  		    .close {
 		    	position: absolute;
-    			right: 10px;
-    			top: 10px;
+    			right: 30px;
+    			top: 30px;
     			width: 40px;
+    			svg {
+    				width: 40px;
+    				height: 40px;
+    			}
+    			&:hover {
+    				svg {
+    					path{
+    						stroke: $flesh;
+    					}
+    				}
+    			}
 		    }
- 	}
+ 	// }
 
  		.info {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			left: 0;
+			width: 100%;
+			display: flex;
+			&.playing{
+		    	opacity: 0;
+		    	pointer-events: none;
+		    	transition: opacity .5s ease;
+		    }
+ 		}
+ 		.bottom-panel {
+ 			width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: flex-end;
+		    padding: 30px;
+
+		    h1 {
+		    	color: white;
+		    	font-family: 'Sharp Grotesk Book', sans-serif;
+		    	font-size: 30px!important;
+		    }
+		    button, div {
+		    	flex: 0 0 33%;
+		    	&.play {
+		    		svg {
+		    			margin: 0 auto;
+		    			path {
+		    					transition: all .5s ease;
+		    				}
+		    			}
+			    		&:hover {
+			    			svg {
+			    				path {
+			    					stroke: $flesh;
+			    					transition: all .5s ease;
+			    				}
+			    			}
+			    		}	
+		    		}
+		    		&.fullscreen {
+		    			svg {
+		    				margin-left: auto;
+		    				    display: block;
+		    				path {
+		    					transition: all .5s ease;
+		    				}
+		    			}
+		    			&:hover {
+			    			svg {
+			    				path {
+			    					stroke: $flesh;
+			    					transition: all .5s ease;
+			    				}
+			    			}
+			    		}	
+		    		}
+		    	img {
+		    		width: 45px;
+		    	}
+		    }
+
+ 		}
+
+ 	}
+
+}
+
+
+
+/////////////////////
+// Single Stories
+/////////////////////
+
+.single-story {
+
+
+	 	.info {
 			position: absolute;
 			top: 0;
 			height: 100%;
@@ -329,76 +754,49 @@ transition: color .25s ease;
 		    }
 
  		}
- 	.slide {
- 		.sixteen-nine {
- 		&.lazy {
 
-	    		transition: all .5s ease;
-	 		}
 
-	 		&.text {
-	 			position: absolute;
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    background-color: $sapphire; 
-			    transition: all .25s ease;
-			   .content {
-			   	 border: 2px solid $teal;
-			   	 .content-wrap {
-			   	 	position: relative;
-			   	 	height: 100%;
-			   	 	div {
-			   	 		width: 100%;
-						display: flex;
-						align-items: flex-end;
-						height: 100%;
-						position: absolute;
-						justify-content: space-between;
-						top: 0;
-						left: 0;
-			   	 	}
-			   	 }
-			   }
-	 		}
-	 	}
- 		&.active {
- 			.sixteen-nine {
-	 			&.lazy {
-		    		transition: all .25s ease;
-	    		}
-	    	}	
- 		}
- 	
- 		h1 {
- 			color: $flesh;
- 			font-size: 24px!important;
- 			transition: all .25s ease;
- 		}
- 		h2 {
- 			color: $flesh;
- 			font-size: 20px!important;
- 			transition: all .25s ease;
- 		}
- 	&:hover, &.active {
- 		.sixteen-nine {
- 			&.text {
-	 			position: absolute;
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    background-color: transparent; 
-			    transition: all .25s ease;
-			    h1, h2 {
-		 			color: white;
-		 			transition: all .25s ease;
-		 		}
-	 		}
- 		}
- 	}
- 	}
+ 				div.social {
+			   	 		position: absolute;
+			   	 		display: flex;
+			   	 		padding: 30px 0 60px;
+			   	 		// justify-content: space-between;
+			   	 		width: calc(100% - 60px);
 
+			   	 		a {
+			   	 			text-decoration: none;
+			   	 			position: relative;
+			   	 			font-family: 'Sharp Grotesk Book', sans-serif;
+			   	 			color: white;
+			   	 			margin-right: 15px;
+			   	 			&:before {
+					          content: '';
+					          height: 2px;
+					          width: 0;
+					          background-color: $teal;
+					          position: absolute;
+					          left: 0;
+					          bottom: -2px;
+					           transition: all .5s ease;
+
+					        }
+					        &:hover {
+					        	&:before {
+							        content: '';
+							        height: 2px;
+							        width: 100%!important;
+							        background-color: $teal;
+							        position: absolute;
+							        left: 0;
+							        bottom: -2px;
+							        transition: all .5s ease;
+
+							    }
+					        }
+			   	 		}
+	 				}
 }
+
 /////////////////////
 // 404
 /////////////////////

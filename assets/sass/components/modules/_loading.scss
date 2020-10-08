@@ -1,25 +1,29 @@
 #lightcase-loading {
-  @include icon(#fff);
+  // @include icon(#fff);
 
   position: fixed;
   z-index: 2001;
   top: 50%;
-  left: 50%;
-
+  left: 0;
+  right: 0;
   margin-top: -0.5em;
   margin-left: -0.5em;
+  margin: 0 auto;
 
   opacity: 1;
 
-  font-size: 32px;
+  // font-size: 32px;
+  width: 100px;
+  height: 100px;
 
-  text-shadow: 0 0 15px #fff;
+  // text-shadow: 0 0 15px #fff;
 
   // Fixes the icon wobble issue in firefox
   -moz-transform-origin: 50% 53%;
-
-  -webkit-animation: lightcase-spin 0.5s infinite linear;
-  -moz-animation: lightcase-spin 0.5s infinite linear;
-  -o-animation: lightcase-spin 0.5s infinite linear;
-  animation: lightcase-spin 0.5s infinite linear;
+ background-image: url(assets/images/icons/spinner.svg);
+ background-size: contain;
+  -webkit-animation: lightcase-spin 2.5s infinite linear;
+  -moz-animation: lightcase-spin 2.5s infinite linear;
+  -o-animation: lightcase-spin 2.5s infinite linear;
+  animation: lightcase-spin 2.5s infinite linear;
 }

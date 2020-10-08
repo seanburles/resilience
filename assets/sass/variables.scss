@@ -17,7 +17,7 @@ $jade: #1f9f8b;
 }
 
 .sapphire {
-	color: $sapphire;
+	color: $sapphire!important;
 }
 
 .sapphire-bg {
@@ -30,4 +30,11 @@ $jade: #1f9f8b;
 
 .jade {
 	color: $jade;
+}
+
+.rel {
+	position: relative;
+}
+.flesh {
+	color: $flesh;
 }
